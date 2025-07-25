@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="icons/icon32.png" alt="YouTube AdBlocker" class="logo">
+      <h1>YouTube AdBlocker</h1>
+    </div>
+    
+    <div class="content">
+      <div class="toggle-container">
+        <label class="toggle-label">
+          <input type="checkbox" id="adBlockerToggle" class="toggle-input">
+          <span class="toggle-slider"></span>
+          <span class="toggle-text">Block Ads</span>
+        </label>
+      </div>
+      
+      <div class="status" id="status">
+        <span class="status-text" id="statusText">AdBlocker is enabled</span>
+      </div>
+      
+      <div class="stats">
+        <div class="stat-item">
+          <span class="stat-label">Ads Blocked:</span>
+          <span class="stat-value" id="adsBlocked">0</span>
+        </div>
+      </div>
+      
+      <div class="info">
+        <p>This extension blocks pre-roll, mid-roll, post-roll, banner, and overlay ads on YouTube.</p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/popup.js"></script>
+</body>
+</html>

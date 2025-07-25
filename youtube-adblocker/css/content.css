@@ -1,0 +1,106 @@
+/* Content script CSS for hiding YouTube ads */
+
+/* Hide video ad containers */
+.video-ads,
+.ytp-ad-module,
+.ytp-ad-overlay-container,
+.ytp-ad-player-overlay,
+.ytp-ad-skip-button-container,
+.ytp-ad-text,
+.ytp-ad-preview-container,
+ytd-display-ad-renderer,
+ytd-video-masthead-ad-primary-video-renderer,
+ytd-in-feed-ad-layout-renderer,
+ytd-ad-slot-renderer,
+yt-mealbar-promo-renderer,
+.ytd-mealbar-promo-renderer {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Hide banner and sidebar ads */
+ytd-banner-promo-renderer,
+.ytd-banner-promo-renderer,
+ytd-brand-video-singleton-renderer,
+ytd-brand-video-shelf-renderer,
+ytd-promoted-sparkles-web-renderer,
+ytd-promoted-video-renderer,
+ytd-compact-promoted-video-renderer,
+ytd-promoted-sparkles-text-search-renderer,
+#masthead-ad,
+.masthead-ad-control {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide overlay ads */
+.ytp-ad-overlay-container,
+.ytp-ce-covering-overlay,
+.ytp-ad-overlay-close-button {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide ads marked with is-ad attribute */
+ytd-rich-item-renderer[is-ad],
+ytd-video-renderer[is-ad],
+ytd-compact-video-renderer[is-ad] {
+  display: none !important;
+}
+
+/* Hide Google Ads containers */
+[id*="google_ads"],
+[class*="google-ads"],
+[data-ad-slot],
+.advertisement,
+.ads,
+.ad-container,
+[id*="adsystem"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide YouTube Premium promotions */
+ytd-premium-promo-renderer,
+ytd-statement-banner-renderer {
+  display: none !important;
+}
+
+/* Hide sponsored content */
+[aria-label*="Sponsored"],
+[title*="Sponsored"] {
+  display: none !important;
+}
+
+/* Hide video ad elements */
+.ytp-ad-button,
+.ytp-ad-duration-remaining,
+.ytp-ad-visit-advertiser-button,
+.ytp-flyout-cta,
+.ytp-videowall-still-info-content {
+  display: none !important;
+}
+
+/* Hide mobile ads */
+.mobile-topbar-header-ad-slot,
+.ytm-promoted-video-renderer,
+.ytm-compact-promoted-video-renderer {
+  display: none !important;
+}
+
+/* Additional hiding for ad-related elements */
+*[class*="ad-"]:not([class*="add"]):not([class*="admin"]):not([class*="advance"]) {
+  display: none !important;
+}
+
+/* Hide elements containing "Sponsored" text */
+*:not(script):not(style) {
+  &:has-text("Sponsored"):not(:has-text("Sponsored by")) {
+    display: none !important;
+  }
+}
